@@ -9,14 +9,14 @@
 #  pool: 5
 #  timeout: 5000
 
-development:
-  adapter: postgresql
-  encoding: utf8
-  database: bonduran-db
-  host: localhost
-  pool: 5
-  username: lumyk
-  password: 9030955901
+#development:
+#  adapter: postgresql
+#  encoding: utf8
+#  database: 
+#  host: localhost
+#  pool: 5
+#  username: 
+#  password: 
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -25,6 +25,11 @@ development:
 #  <<: *default
 #  database: db/test.sqlite3
 #
-#production:
-#  <<: *default
-#  database: db/production.sqlite3
+production:
+  adapter: postgresql
+  encoding: utf8
+  database: dd5o13lgej7g2s
+  host: ec2-46-137-125-22.eu-west-1.compute.amazonaws.com
+  pool: 5
+  username: fecnvlmqvlyvvp
+  password: 7Vap5nmdRN7l2uRsuZYvvWjHro
