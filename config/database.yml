@@ -28,8 +28,8 @@
 production:
   adapter: postgresql
   encoding: utf8
-  database: dd5o13lgej7g2s
-  host: ec2-46-137-125-22.eu-west-1.compute.amazonaws.com
+  database: d14e35vom4ldnp
+  host: ec2-176-34-99-132.eu-west-1.compute.amazonaws.com
   pool: 5
-  username: fecnvlmqvlyvvp
-  password: 7Vap5nmdRN7l2uRsuZYvvWjHro
+  username: pyuesytabjtmul
+  password: jbC9-A2vUP4tOKRjSBoxCyKXOZ
