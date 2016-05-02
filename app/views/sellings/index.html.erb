@@ -1,0 +1,30 @@
+<h1>На продажу</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Товар</th>
+      <th>Количество</th>
+      <th>Магазин</th>
+      <th colspan="4">Дата создания</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sellings.each do |selling| %>
+      <tr>
+        <td><%= Prodact.find(selling.prodact_id).name %></td>
+        <td><%= selling.count %></td>
+        <td><%= Store.find(selling.store_id).name %></td>
+        <td><%= selling.created_at.strftime('%d %b %Y %H:%M:%S') %></td>
+        <td><%= link_to 'Show', selling %></td>
+        <td><%= link_to 'Edit', edit_selling_path(selling) %></td>
+        <td><%= link_to 'Destroy', selling, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Selling', new_selling_path %>

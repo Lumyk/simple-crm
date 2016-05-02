@@ -1,0 +1,23 @@
+<h1>Listing Sate Types</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th colspan="3">Название</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sate_types.each do |sate_type| %>
+      <tr>
+        <td><%= sate_type.name %></td>
+        <td><%= link_to 'Edit', edit_sate_type_path(sate_type) %></td>
+        <td><%= link_to 'Destroy', sate_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sate type', new_sate_type_path %>

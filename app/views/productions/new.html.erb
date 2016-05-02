@@ -1,0 +1,20 @@
+<h1>New Production</h1>
+
+<%= simple_form_for(@production) do |f| %>
+    <%= f.error_notification %>
+
+    <div class="form-inputs">
+      <%= f.input :prodact_id, collection: @products %>
+      <%= f.input :count %>
+
+      <%= f.input :status, collection: [['Нарезано', 1], ['Сшиваеться', 2]]
+      %>
+      <%= f.input :master %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit %>
+    </div>
+<% end %>
+
+<%= link_to 'Back', productions_path %>

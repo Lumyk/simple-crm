@@ -1,0 +1,20 @@
+<h1>Изменить</h1>
+
+<%= simple_form_for(@selling) do |f| %>
+    <%= f.error_notification %>
+    <div class="form-inputs">
+      <%= f.input :prodact_id, collection: @products, disabled:true %>
+      <%= f.input :count, disabled:true %>
+      <%= f.input :store_id, collection: @stores, disabled:true %>
+      <%= f.input :store_price %>
+      <%= f.input :my_money %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit %>
+    </div>
+<% end %>
+
+
+<%= link_to 'Show', @selling %> |
+<%= link_to 'Back', sellings_path %>

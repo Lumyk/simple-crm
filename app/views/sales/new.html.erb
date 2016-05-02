@@ -1,0 +1,40 @@
+<h1>New Sale</h1>
+
+<%= simple_form_for(@sale) do |f| %>
+    <%= f.error_notification %>
+
+    <div class="form-inputs">
+      <%= f.input :prodact_id, collection: @products %>
+      <%= f.input :count %>
+      <%= f.input :type_of_sale, as: :radio_buttons, collection: [['Наша', 1], ['В магазине', 2]],:input_html => {:onClick => 'setTypeMy(this);'} %>
+      <%= f.input :store_id, collection: @stores, id:'store' %>
+      <%= f.input :sate_type_id, collection: @sate_types, id: 'saleType' %>
+      <%= f.input :price %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit %>
+    </div>
+<% end %>
+
+<script type="text/javascript">
+
+  function setTypeMy(e) {
+    if (e.value == 1) {
+      document.getElementsByClassName('form-group select optional sale_store_id')[0].style.display = 'none';
+      document.getElementsByClassName('form-group select optional sale_sate_type_id')[0].style.display = 'block';
+    } else {
+      document.getElementsByClassName('form-group select optional sale_store_id')[0].style.display = 'block';
+      document.getElementsByClassName('form-group select optional sale_sate_type_id')[0].style.display = 'none';
+    }
+  }
+
+  window.onload = function(){
+    document.getElementsByClassName('form-group select optional sale_store_id')[0].style.display = 'none';
+    document.getElementsByClassName('form-group select optional sale_sate_type_id')[0].style.display = 'none';
+  }
+
+
+</script>
+
+<%= link_to 'Back', sales_path %>

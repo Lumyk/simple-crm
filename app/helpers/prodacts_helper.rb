@@ -1,0 +1,2 @@
+module ProdactsHelper
+end

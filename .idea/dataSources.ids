@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="PostgreSQL - dd5o13lgej7g2s@ec2-46-137-125-22.eu-west-1.compute.amazonaws.com" uuid="6bbd29d0-6e0e-43e0-8b2a-6b9aff1186cf">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source name="PostgreSQL - bonduran-db@localhost" uuid="6ae7c2e9-af9b-4e4d-aedf-78ba964f3a21">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>

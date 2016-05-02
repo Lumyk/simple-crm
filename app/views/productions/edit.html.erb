@@ -1,0 +1,19 @@
+<h1>Изменить статус</h1>
+
+<%= simple_form_for(@production) do |f| %>
+    <%= f.error_notification %>
+
+    <div class="form-inputs">
+      <%= f.input :prodact_id, collection: @products , disabled:true%>
+      <%= f.input :count , disabled:true%>
+
+      <%= f.input :status, collection: [['Нарезано', 1], ['Сшиваеться', 2], ['Готово',3]]
+      %>
+      <%= f.input :master , disabled:true %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit %>
+    </div>
+<% end %>
+<%= link_to 'Back', productions_path %>

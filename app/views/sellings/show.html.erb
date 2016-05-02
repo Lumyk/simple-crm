@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<table class="table">
+  <body>
+    <tr>
+      <th>Товар</th>
+      <td><%= Prodact.find(@selling.prodact_id).name %></td>
+    </tr>
+    <tr>
+        <th>Количество</th>
+        <td><%= @selling.count %></td>
+    </tr>
+    <tr>
+      <th>Магазин</th>
+      <td><%= Store.find(@selling.store_id).name %></td>
+    </tr>
+    <tr>
+      <th>Цена в магазине</th>
+      <td><%= @selling.store_price %></td>
+    </tr>
+    <tr>
+      <th>Цена за вчетом процента магазина</th>
+      <td><%= @selling.my_money %></td>
+    </tr>
+  </body>
+</table>
+
+<%= link_to 'Edit', edit_selling_path(@selling) %> |
+<%= link_to 'Back', sellings_path %>

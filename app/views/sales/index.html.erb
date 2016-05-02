@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Sales</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sales.each do |sale| %>
+      <tr>
+        <td><%= Prodact.find(sale.prodact_id).name %></td>
+        <td><%= sale.count %></td>
+        <td><%= ['Наша','В магазине'][sale.type_of_sale.to_i-1] %></td>
+        <td><%=
+          if sale.type_of_sale.to_i != 1
+            Store.find(sale.store_id).name
+          else
+            SateType.find(sale.sate_type_id).name
+          end
+        %></td>
+        <td><%= sale.price %></td>
+        <td><%= sale.created_at.strftime('%d %b %Y %H:%M:%S') %></td>
+        <td><%= link_to 'Destroy', sale, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sale', new_sale_path %>
